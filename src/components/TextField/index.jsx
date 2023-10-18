@@ -1,44 +1,39 @@
-import React from "react";
-import { styled } from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
+import search from "../TextField/search.svg";
 
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+  display: inline-block;
+  position: relative;
+`
 
-const StylzedTextField = styled.input`
-  margin-right: 12px;
+const StyledTextField = styled.input`
   height: 56px;
   width: 602px;
   padding: 12px 16px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  border: 2px solid;
-  border-color: #c98cf1;
+  color: #C98CF1;
   background: transparent;
-  color: #d9d9d9;
-  font-weight: 400;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 10px;
+  outline: none;
   font-size: 20px;
   line-height: 20px;
-  outline: none;
-`;
+`
 
 const SearchIcon = styled.img`
   position: absolute;
-  top: 10;
+  top: 15px;
   right: 15px;
-  height: 38px;
-  width: 38px;
-`;
+`
 
-const TextField = (props) => {
+const TextField = () => {
   return (
     <Container>
-      <StylzedTextField placeholder="O que você procura?" {...props} />
-      <SearchIcon src="/img/search.svg" />
+    <StyledTextField placeholder='O que você procura?'/>
+    <SearchIcon src={search}/>
     </Container>
-  );
-};
+  )
+}
 
-export default TextField;
+export default TextField

@@ -1,7 +1,8 @@
 import { styled } from "styled-components"
 import TextField from "../TextField"
 
-const StylzedHeader = styled.header`
+
+const StyledHeader = styled.header`
     padding: 60px 0;
     display: flex;
     justify-content: space-between;
@@ -13,10 +14,10 @@ const StylzedHeader = styled.header`
 
 const Header = () => {
   return (
-    <StylzedHeader>
+    <StyledHeader>
         <img src="/img/logo.png"/>
         <TextField/>
-    </StylzedHeader>
+    </StyledHeader>
   )
 }
 
