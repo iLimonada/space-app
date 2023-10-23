@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledBanner = styled.div` // Na resposta do professor foi usado figure, porém pode ser substituido por div 
+const StyledBanner = styled.figure` // Na resposta do professor foi usado figure, porém pode ser substituido por div 
     background-image: ${props => `url(${props.$backgroundImage})`};
+    display: flex;
     flex-grow: 1;
     background-repeat: no-repeat;
-    display: flex;
     align-items: center;
     min-height: 328px;
     margin: 0;
     border-radius: 20px;
     max-width: 100%;
+    background-size: cover;
 `
 const StyledTitle = styled.h1`
     font-weight: 400;

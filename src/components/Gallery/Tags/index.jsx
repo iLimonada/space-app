@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import tags from './tags.json'
 import styled from 'styled-components'
 
-const Container = styled.div`
-  margin: 16px;
+const Container = styled.section`
+  margin-top: 16px;
   display: flex;
+  align-items: center;
   gap: 24px;
+
 `
 
 const StyledTag = styled.h3`

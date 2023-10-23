@@ -8,9 +8,6 @@ import Gallery from "./components/Gallery";
 import fotos from './fotos.json'
 import { useState } from "react";
 
-
-
-
 const GradientBackground = styled.div`
   background: linear-gradient(
     174.61deg,
@@ -30,7 +27,7 @@ const AppContainer = styled.div`
 
 const MainContainer = styled.main`
   display: flex;
-  gap: 72px;
+  gap: 24px;
 `;
 
 const GalleryContent = styled.section`

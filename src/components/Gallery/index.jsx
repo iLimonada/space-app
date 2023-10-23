@@ -1,32 +1,42 @@
-import React from 'react'
-import styled from 'styled-components'
-import Title from '../Title'
-import Tags from './Tags'
-import Trending from './Trending'
+import React from "react";
+import styled from "styled-components";
+import Title from "../Title";
+import Images from "./Images";
+import Tags from "./Tags";
+import Trending from "./Trending";
 
 const ContainerGallery = styled.div`
   display: flex;
-`
+  gap: 24px;
+`;
 const FlowSection = styled.section`
   flex-grow: 1;
-`
+`;
 
-const Gallery = ( { fotos = []}) => {
+const ContainerImages = styled.section`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+`;
+
+const Gallery = ({ fotos = [] }) => {
   return (
     <>
-      <Tags/>
-
+      <Tags />
       <ContainerGallery>
         <FlowSection>
           <Title>Navegue pela galeria</Title>
-          {fotos.map( foto => foto.titulo)}
+          <ContainerImages>
+            {fotos.map((foto) => (
+              <Images key={foto.id} foto={foto} />
+            ))}
+          </ContainerImages>
         </FlowSection>
-        <Trending>
-
-        </Trending>
+        <Trending></Trending>
       </ContainerGallery>
     </>
-  )
-}
+  );
+};
 
-export default Gallery
+export default Gallery;
