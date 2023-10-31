@@ -27,10 +27,10 @@ const SearchIcon = styled.img`
   right: 15px;
 `
 
-const TextField = () => {
+const TextField = ({ setFilter }) => {
   return (
     <Container>
-    <StyledTextField placeholder='O que você procura?'/>
+    <StyledTextField onChange={(Event) => { setFilter(Event.target.value) }} placeholder='O que você procura?'/>
     <SearchIcon src={search}/>
     </Container>
   )

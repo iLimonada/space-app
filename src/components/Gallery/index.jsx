@@ -21,16 +21,20 @@ const ContainerImages = styled.section`
   gap: 24px;
 `;
 
-const Gallery = ({ fotos = [] }) => {
+const Gallery = ({ fotos = [], isSelectedPic, toggleFavorite, setTag }) => {
   return (
     <>
-      <Tags />
+      <Tags setTag={setTag}/>
       <ContainerGallery>
         <FlowSection>
           <Title>Navegue pela galeria</Title>
           <ContainerImages>
-            {fotos.map((foto) => (
-              <Images key={foto.id} foto={foto} />
+            {fotos.map((foto) => ( <Images
+              toggleFavorite={toggleFavorite}
+              key={foto.id} 
+              foto={foto}
+              isRequestedZoom={isSelectedPic}
+            />
             ))}
           </ContainerImages>
         </FlowSection>

@@ -46,7 +46,15 @@ const StyledIconButton = styled.button`
   cursor: pointer;
 `;
 
-const Images = ({ foto, expandida = false }) => {
+const Images = ({ foto, expandida = false, isRequestedZoom, toggleFavorite }) => {
+  
+  // const favoriteIcon = foto.favorita ? 'icons/favorito-ativo.png' : '/icons/favorito.png'
+  let favoriteIcon = '/icons/favorito.png';
+  if(foto.favorita) {
+    favoriteIcon = '/icons/favorito-ativo.png'
+  }
+  
+  
   return (
     <StyledFigure $expandida={expandida} id={`foto-${foto.id}`}>
       <img src={foto.path} alt={foto.alt} />
@@ -54,11 +62,11 @@ const Images = ({ foto, expandida = false }) => {
         <h3> {foto.titulo} </h3>
         <StyledFooter>
           <h4> {foto.fonte} </h4>
-          <StyledIconButton>
-            <img src="/icons/favorito.png" alt="icone de favoritar" />
+          <StyledIconButton onClick={() => toggleFavorite(foto)}>
+            <img src={favoriteIcon} alt="icone de favoritar" />
           </StyledIconButton>
           {!expandida && (
-            <StyledIconButton aria-hidden={expandida}>
+            <StyledIconButton aria-hidden={expandida} onClick={() => isRequestedZoom(foto)} >
               <img src="/icons/expandir.png" alt="Icone de expandir" />
             </StyledIconButton>
           )}
