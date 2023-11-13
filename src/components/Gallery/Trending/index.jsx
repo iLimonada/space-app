@@ -24,6 +24,10 @@ const StyledButton = styled.button`
     cursor: pointer;
     width: 100%;
     margin-top: 16px;
+    &:hover {
+        background: linear-gradient(90deg, #C98CF1 0%, #7B78E5 100%);
+        color: #fff; 
+    }
 `;
 
 const Trending = () => {

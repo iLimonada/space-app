@@ -44,7 +44,6 @@ const App =() => {
   const [selectedPic, setSelectedPic] = useState(null)
   const [filter, setFilter] = useState('')
   const [tag, setTag] = useState(0)
-  // const [picWithZoom, setPicWithZoom] = useState(null)
 
   const toggleFavorite = (foto) =>
   {
