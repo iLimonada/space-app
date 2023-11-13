@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { useState, useEffect } from "react";
 import GlobalStyles from "./components/GlobalStyles";
 import Header from "./components/Header";
 import SideBar from "./components/SideBar";
@@ -6,7 +7,6 @@ import Banner from "./components/Banner";
 import bannerBackground from "./assets/banner.png";
 import Gallery from "./components/Gallery";
 import fotos from './fotos.json'
-import { useState, useEffect } from "react";
 import ZoomModal from "./components/ZoomModal";
 import Footer from "./components/Footer";
 
