@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
         </li>
       </ContainerIcon>
-      <StyledText>Desenvolvido por André Luna.</StyledText>
+      <StyledText>Desenvolvido por André Luna e Alura.</StyledText>
     </StyledFooter>
   );
 };
